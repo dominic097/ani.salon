@@ -1,0 +1,12 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",  "title": "1 · Petal wordmark", "x": 0,    "y": 0,   "w": 960, "h": 640 },
+    { "file": "Logo2.dc.html", "title": "2 · Jasmine seal",   "x": 1060, "y": 0,   "w": 960, "h": 640 },
+    { "file": "Logo3.dc.html", "title": "3 · Handwritten",    "x": 0,    "y": 780, "w": 960, "h": 640 },
+    { "file": "Logo4.dc.html", "title": "4 · Leaf",           "x": 1060, "y": 780, "w": 960, "h": 640 }
+  ],
+  "annotations": [
+    { "id": "brief", "x": 0, "y": -150, "w": 520, "text": "ANI — logo directions\nEach board: primary logo on cream · reversed on the site's dark brown · mark alone as avatar / app icon · palette.\nAll four use the website's palette and fonts so whichever you pick drops straight in." }
+  ],
+  "launch": { "view": "canvas" }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="98" fill="#dfe8d3"/>
+  <g transform="translate(100 78)" fill="#fdf8f2">
+    <ellipse rx="10" ry="26" cy="-24"/>
+    <ellipse rx="10" ry="26" cy="-24" transform="rotate(72)"/>
+    <ellipse rx="10" ry="26" cy="-24" transform="rotate(144)"/>
+    <ellipse rx="10" ry="26" cy="-24" transform="rotate(216)"/>
+    <ellipse rx="10" ry="26" cy="-24" transform="rotate(288)"/>
+    <circle r="6" fill="#ffd97a"/>
+  </g>
+  <text x="100" y="158" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-weight="500" font-size="40" letter-spacing="8" fill="#3a2e2a">ANI</text>
+</svg>

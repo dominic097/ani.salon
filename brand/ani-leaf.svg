@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 120" width="260" height="120">
+  <text x="14" y="88" font-family="Jost, Helvetica, Arial, sans-serif" font-weight="500" font-size="92" letter-spacing="2" fill="#3a2e2a">AN</text>
+  <path d="M200 14 C 224 34, 228 66, 204 92 C 184 70, 182 40, 200 14 Z" fill="#8a6aa3"/>
+  <path d="M203 24 L 205 84" stroke="#fdf8f2" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
