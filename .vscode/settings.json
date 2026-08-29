@@ -1,0 +1,7 @@
+{
+    "git.diagnosticsCommitHook.enabled": true,
+    "git.diagnosticsCommitHook.sources": {
+        "*": "error",
+        "Pulse": "hint"
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "pages": [
+    { "id": "page-empower", "name": "Empowering directions" },
+    { "id": "page-earlier", "name": "Earlier · commercial" }
+  ],
+  "artboards": [
+    { "file": "DirectionE.dc.html", "title": "E · Inner Child",  "page": "page-empower", "x": 0,    "y": 0, "w": 1200, "h": 1650 },
+    { "file": "DirectionF.dc.html", "title": "F · Her Voice",    "page": "page-empower", "x": 1300, "y": 0, "w": 1200, "h": 1750 },
+    { "file": "DirectionG.dc.html", "title": "G · Soft Power",   "page": "page-empower", "x": 2600, "y": 0, "w": 1200, "h": 1900 },
+    { "file": "DirectionH.dc.html", "title": "H · Bloom",        "page": "page-empower", "x": 3900, "y": 0, "w": 1200, "h": 1750 },
+    { "file": "DirectionI.dc.html", "title": "I · Mirror",       "page": "page-empower", "x": 5200, "y": 0, "w": 1200, "h": 1800 },
+    { "file": "Main.dc.html",       "title": "A · Soft Romantic",        "page": "page-earlier", "x": 0,    "y": 0, "w": 1200, "h": 1700 },
+    { "file": "DirectionB.dc.html", "title": "B · Editorial Monochrome", "page": "page-earlier", "x": 1300, "y": 0, "w": 1200, "h": 1700 },
+    { "file": "DirectionC.dc.html", "title": "C · Modern Luxe",          "page": "page-earlier", "x": 2600, "y": 0, "w": 1200, "h": 1900 },
+    { "file": "DirectionD.dc.html", "title": "D · Fresh Minimal",        "page": "page-earlier", "x": 3900, "y": 0, "w": 1200, "h": 1900 }
+  ],
+  "annotations": [
+    { "id": "e-note", "page": "page-empower", "x": 0,    "y": -190, "w": 300, "text": "E · Inner Child\nPlayful, sunlit, handwritten notes. \"You were beautiful before anyone told you to be.\" Joy and permission to play.\nTradeoff: least formal — may feel young for premium bridal." },
+    { "id": "f-note", "page": "page-empower", "x": 1300, "y": -190, "w": 300, "text": "F · Her Voice\nFeminist manifesto. Plum + coral, bold Bodoni. \"Beauty is not a standard. It's a voice.\" Most charismatic and opinionated.\nTradeoff: strong stance — polarising to some clients." },
+    { "id": "g-note", "page": "page-empower", "x": 2600, "y": -190, "w": 300, "text": "G · Soft Power\nQuiet confidence. Sand + terracotta, light serif, lots of air. \"Charisma isn't loud.\"\nTradeoff: subtle — relies on excellent photography." },
+    { "id": "h-note", "page": "page-empower", "x": 3900, "y": -190, "w": 300, "text": "H · Bloom\nGrowth metaphor. Sage + lilac, organic shapes. \"You were always the flower. We just water.\" Warm, nurturing, approachable.\nTradeoff: florals are a common salon motif." },
+    { "id": "i-note", "page": "page-empower", "x": 5200, "y": -190, "w": 300, "text": "I · Mirror\nCinematic self-recognition. Burgundy, candlelight, Italiana. \"Meet the woman in the mirror.\" Strongest emotional pull for bridal.\nTradeoff: dark & dramatic — less everyday-friendly." },
+    { "id": "earlier-note", "page": "page-earlier", "x": 0, "y": -170, "w": 360, "text": "Earlier set (A–D) — kept for reference. The brief moved away from this commercial tone." }
+  ],
+  "launch": { "view": "canvas", "page": "page-empower" }
+}

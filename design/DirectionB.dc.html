@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=DM+Sans:wght@300;400;500&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: 'DM Sans', 'Helvetica Neue', system-ui, sans-serif; color: #111111; background: #f6f5f2; }
+    a { color: #111111; } a:hover { color: #6b6b6b; }
+    h1, h2, h3 { font-family: 'Playfair Display', 'Times New Roman', serif; font-weight: 400; margin: 0; line-height: 1; }
+  </style>
+</helmet>
+<div style="width: 1200px; background: #f6f5f2; display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px 56px; border-bottom: 2px solid #111;">
+    <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; text-transform: uppercase; letter-spacing: 0.04em;">[Salon Name]</div>
+    <div style="display: flex; gap: 32px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">
+      <span>Services</span><span>Bridal</span><span>Studio</span><span style="border-bottom: 2px solid #111;">Book</span>
+    </div>
+  </div>
+  <div style="padding: 64px 56px 40px; display: flex; flex-direction: column; gap: 24px; border-bottom: 1px solid #111;">
+    <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.16em; color: #6b6b6b;">Beautician · Bridal Makeup Artist · Est. 2026</div>
+    <h1 style="font-size: 132px; letter-spacing: -0.03em; text-transform: uppercase;">Look like<br><em>yourself,</em> only more.</h1>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid #111;">
+    <div style="grid-column: span 2; height: 520px; background: #d9d6d0; display: flex; align-items: center; justify-content: center; color: #6b6b6b; font-style: italic; font-family: 'Playfair Display', serif; font-size: 22px; border-right: 1px solid #111;">[black &amp; white editorial photo]</div>
+    <div style="padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+      <p style="font-size: 20px; line-height: 1.45; margin: 0; font-family: 'Playfair Display', serif;">A boutique beauty studio for skin, hair, brows and the most important morning of your life. No spa fluff — just skilled hands and honest advice.</p>
+      <div style="background: #111; color: #f6f5f2; padding: 20px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.16em; text-align: center;">Book an appointment →</div>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid #111;">
+    <div style="padding: 48px 56px; border-right: 1px solid #111; display: flex; flex-direction: column; gap: 28px;">
+      <h2 style="font-size: 40px;">Services</h2>
+      <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; justify-content: space-between; padding: 16px 0; border-top: 1px solid #111; font-size: 17px;"><span>01 — Skin &amp; Facials</span><span style="color: #6b6b6b;">from [price]</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 16px 0; border-top: 1px solid #111; font-size: 17px;"><span>02 — Hair &amp; Styling</span><span style="color: #6b6b6b;">from [price]</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 16px 0; border-top: 1px solid #111; font-size: 17px;"><span>03 — Brows &amp; Lashes</span><span style="color: #6b6b6b;">from [price]</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 16px 0; border-top: 1px solid #111; border-bottom: 1px solid #111; font-size: 17px;"><span>04 — Nails</span><span style="color: #6b6b6b;">from [price]</span></div>
+      </div>
+    </div>
+    <div style="padding: 48px 56px; display: flex; flex-direction: column; gap: 28px; background: #111; color: #f6f5f2;">
+      <h2 style="font-size: 40px;"><em>Bridal</em></h2>
+      <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #bdbdbd;">Trial, wedding day, bridal party, on-location. Long-wear products that survive tears, heat and the dance floor.</p>
+      <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #444; font-size: 16px;"><span>Bridal trial</span><span>[price]</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #444; font-size: 16px;"><span>The bride</span><span>[price]</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #444; border-bottom: 1px solid #444; font-size: 16px;"><span>Bride &amp; party</span><span>from [price]</span></div>
+      </div>
+      <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.16em; border-bottom: 2px solid #f6f5f2; align-self: flex-start; padding-bottom: 4px;">Enquire about your date</div>
+    </div>
+  </div>
+  <div style="padding: 56px; display: flex; justify-content: space-between; align-items: flex-end;">
+    <h2 style="font-size: 56px; font-style: italic;">“Flawless from 7am to midnight.”</h2>
+    <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.16em; color: #6b6b6b;">— Priya, bride</div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

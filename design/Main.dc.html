@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: 'Jost', 'Gill Sans', system-ui, sans-serif; font-weight: 300; color: #2b2226; background: #fbf7f3; }
+    a { color: #a86868; } a:hover { color: #2b2226; }
+    h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; margin: 0; line-height: 1.1; }
+  </style>
+</helmet>
+<div style="width: 1200px; background: #fbf7f3; display: flex; flex-direction: column;">
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 22px 64px; border-bottom: 1px solid #e9dcd8;">
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; letter-spacing: 0.08em;">[Salon Name]</div>
+    <div style="display: flex; gap: 36px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;">
+      <span>Services</span><span>Bridal</span><span>About</span><span>Book</span>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; padding: 72px 64px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 22px;">
+      <div style="font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #a86868;">Now open · Beauty Studio &amp; Bridal Makeup</div>
+      <h1 style="font-size: 68px;">Beauty that feels <em style="color: #a86868;">effortlessly you</em></h1>
+      <p style="font-size: 18px; color: #7a6b70; line-height: 1.6; max-width: 460px; margin: 0;">Expert beautician services and bespoke bridal makeup — crafted with care so you walk out radiant every time.</p>
+      <div style="display: flex; gap: 14px; margin-top: 8px;">
+        <div style="background: #2b2226; color: #fbf7f3; padding: 16px 30px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">Book an appointment</div>
+        <div style="border: 1px solid #2b2226; padding: 16px 30px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">Bridal packages</div>
+      </div>
+    </div>
+    <div style="height: 560px; background: linear-gradient(160deg, #f3e3e0, #d9b4ad); border-radius: 220px 220px 12px 12px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 32px; color: #fff; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 22px;">[hero photo]</div>
+  </div>
+  <div style="background: #f3e3e0; padding: 28px 64px; text-align: center; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 24px;">“Every face tells a story. We simply make it shine.”</div>
+  <div style="padding: 80px 64px; display: flex; flex-direction: column; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #a86868;">Our Services</div>
+      <h2 style="font-size: 44px;">Everyday beauty, done beautifully</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;">
+      <div style="background: #fff; border: 1px solid #e9dcd8; padding: 36px 32px; display: flex; flex-direction: column; gap: 14px;">
+        <h3 style="font-size: 28px;">Skin &amp; Facials</h3>
+        <div style="font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #c9a96e;">From [price]</div>
+        <div style="font-size: 15px; color: #7a6b70; line-height: 1.8;">Classic facial · Deep cleanse · Threading &amp; waxing</div>
+      </div>
+      <div style="background: #fff; border: 1px solid #e9dcd8; padding: 36px 32px; display: flex; flex-direction: column; gap: 14px;">
+        <h3 style="font-size: 28px;">Hair &amp; Styling</h3>
+        <div style="font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #c9a96e;">From [price]</div>
+        <div style="font-size: 15px; color: #7a6b70; line-height: 1.8;">Cut &amp; blow-dry · Colour · Event up-dos</div>
+      </div>
+      <div style="background: #fff; border: 1px solid #e9dcd8; padding: 36px 32px; display: flex; flex-direction: column; gap: 14px;">
+        <h3 style="font-size: 28px;">Nails, Brows &amp; Lashes</h3>
+        <div style="font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #c9a96e;">From [price]</div>
+        <div style="font-size: 15px; color: #7a6b70; line-height: 1.8;">Gel polish · Brow tint · Lash lift</div>
+      </div>
+    </div>
+  </div>
+  <div style="background: #2b2226; color: #fbf7f3; padding: 80px 64px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center;">
+    <div style="height: 440px; background: linear-gradient(135deg, #3d3034, #5a4348); border-radius: 50% 50% 12px 12px; display: flex; align-items: center; justify-content: center; color: #c9a96e; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 30px;">[bridal photo]</div>
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <div style="font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #c9a96e;">Bridal Makeup</div>
+      <h2 style="font-size: 44px;">Bespoke looks for your wedding day</h2>
+      <p style="color: #c9bcbf; line-height: 1.6; margin: 0;">From trial to final touch-up, a look that photographs flawlessly and lasts through every dance.</p>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #4a3b40;">
+        <div style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #4a3b40; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px;"><span>Bridal Trial</span><span style="color: #c9a96e; font-size: 18px; font-family: 'Jost', sans-serif;">[price]</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #4a3b40; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px;"><span>The Bride</span><span style="color: #c9a96e; font-size: 18px; font-family: 'Jost', sans-serif;">[price]</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #4a3b40; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px;"><span>Bride &amp; Party</span><span style="color: #c9a96e; font-size: 18px; font-family: 'Jost', sans-serif;">from [price]</span></div>
+      </div>
+      <div style="border: 1px solid #c9a96e; color: #c9a96e; padding: 16px 30px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; align-self: flex-start;">Enquire about your date</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
