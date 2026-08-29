@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="ANI mark">
+  <title>ANI mark</title>
+  <rect width="120" height="120" rx="30" fill="#b5674a"/>
+  <g transform="translate(34.15 22.85) scale(0.75)">
+    <g fill="none" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke="#fdf8f2">
+      <path d="M 13,95 L 38.5,7.2 A 12 12 0 0 1 61.5,7.2 L 88.4,100"/>
+      <path d="M 12.49,85.34 A 16 16 0 1 0 10.88,92.01"/>
+      <path d="M 24.5,60 L 75.5,60"/>
+    </g>
+    <circle cx="-3.5" cy="85" r="4.5" fill="#fdf8f2"/>
+  </g>
+</svg>

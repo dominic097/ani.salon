@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="ANI mark">
+  <title>ANI mark — Kolam Didone A</title>
+  <path fill="#b5674a" d="M 6 140 L 6 80 A 74 74 0 0 1 154 80 L 154 140 Q 154 154 140 154 L 20 154 Q 6 154 6 140 Z"/>
+  <g fill="#fdf8f2" fill-rule="evenodd" transform="translate(28.72 34) scale(0.92)">
+    <path d="M 44 0 L 52.5 0 L 29.1 90 L 20.6 90 Z"/>
+    <path d="M 50.5 0 L 62 0 L 105 100 L 83 100 L 47.79 18.12 Z"/>
+    <path d="M 32 68 L 73 68 L 76.22 75.5 L 30.05 75.5 Z"/>
+    <path d="M 72 93 L 116 93 L 116 100 L 72 100 Z"/>
+    <path d="M -4.53 84 a 17.5 17.5 0 1 0 35 0 a 17.5 17.5 0 1 0 -35 0 Z M 5.97 84 a 7 10 0 1 1 14 0 a 7 10 0 1 1 -14 0 Z"/>
+  </g>
+</svg>

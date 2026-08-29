@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-37 -34 312 149" width="312" height="149" role="img" aria-label="ANI">
+  <title>ANI</title>
+  <!--
+    ANI - "fuse-bindi": Kolam Loops carrier x Bindi Counter fusion.
+    Monoline terracotta #b5674a, stroke 15 on cap height 100, round caps and joins.
+    A: one continuous kolam stroke - crossbar (raised to y=64, normal optical height)
+       swings left into the foot loop and rises as the left diagonal; rounded apex.
+    Bindi: the single gold element - a perfect sun circle cradled on the crossbar,
+       at the third eye inside the A's counter.
+    N: fixed from round one - the diagonal springs from the very top of the left stem,
+       both stems at full cap height, soft kolam curve into the right stem at baseline.
+    I: full-height stem crowned by a terracotta pulli dot (Tamil script's mei dot) -
+       the quiet answer on the right; kolam is loops around dots.
+    Reads on cream #fdf8f2 and on ink #3a2e2a as-is.
+  -->
+  <g fill="none" stroke="#b5674a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 77.5,64 L -2.97,64 A 18.75 18.75 0 1 0 15.03,87.97 L 38.47,7.16 A 12 12 0 0 1 61.53,7.16 L 88.45,100"/>
+    <path d="M 125.45,100 L 125.45,0 L 180.65,95.87 A 9 9 0 0 0 197.45,91.38 L 197.45,0"/>
+    <path d="M 236.45,0 L 236.45,100"/>
+  </g>
+  <circle cx="50" cy="46" r="10.5" fill="#ffd97a"/>
+  <circle cx="236.45" cy="-22" r="7.5" fill="#b5674a"/>
+</svg>

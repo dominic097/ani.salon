@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -23 317 146" width="317" height="146" role="img" aria-label="ANI">
+  <title>ANI</title>
+  <g fill="none" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke="#b5674a">
+    <path d="M 13,95 L 38.5,7.2 A 12 12 0 0 1 61.5,7.2 L 88.4,100"/>
+    <path d="M 12.49,85.34 A 16 16 0 1 0 10.88,92.01"/>
+    <path d="M 24.5,60 L 75.5,60"/>
+    <path d="M 132,100 L 132,0"/>
+    <path d="M 128.03,10.53 A 16 16 0 1 1 126.85,7.98 L 177.3,95.2 A 10 10 0 0 0 196,91.2 L 196,0"/>
+    <path d="M 235,0 L 235,91.5 A 9 9 0 0 0 252.6,91 L 255.8,74.3"/>
+  </g>
+  <circle cx="-3.5" cy="85" r="4.5" fill="#8a6aa3"/>
+</svg>

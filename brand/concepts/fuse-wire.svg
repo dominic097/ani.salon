@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 40 340 196" width="340" height="196" role="img" aria-label="ani">
+  <!-- fuse-wire: one continuous wire "ani" — cameo profile in the a's counter, kolam curl crossing at the n's foot, sun-seed knot dotting the i -->
+  <circle cx="292" cy="80" r="14" fill="#ffd97a"/>
+  <path d="M 108 124
+           C 108 114 94.6 107 85 101.5
+           A 54 54 0 0 0 6 136
+           C 8 141 9 145 8 148
+           C 3 152 1 156 3 160
+           C 4 163 8 164.5 13 164.5
+           C 9 166.5 8.5 170 11 172.5
+           C 8.5 175.5 9 179 13 181
+           C 9 184 9.5 189 14 194
+           C 20 200 30 203 44 203
+           C 58 203 72 200 85 195.5
+           C 97 201 106 196 108 187
+           L 108 124
+           L 108 200
+           C 108 213 117 216.5 127 212.5
+           C 139 207 146 198 150 190
+           C 153 183 158 169 167 168
+           A 15 15 0 1 1 152 183
+           L 152 145
+           A 50 50 0 0 1 252 145
+           L 252 200
+           A 20 14 0 0 0 292 200
+           L 292 100
+           A 20 20 0 1 1 292 60
+           A 20 20 0 1 1 292 100"
+        fill="none" stroke="#b5674a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

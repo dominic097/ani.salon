@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 36.5 196 196" width="196" height="196" role="img" aria-label="ani mark">
+  <title>ani — kolam seed mark</title>
+  <!-- the line's beginning: the a + its closed start loop, gold seed (pulli) inside -->
+  <circle cx="145" cy="192" r="11" fill="#ffd97a"/>
+  <path fill="none" stroke="#b5674a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" d="
+    M 120 60
+    L 120 110
+    A 50 50 0 0 1 20 110
+    A 50 50 0 0 1 120 110
+    L 120 154
+    C 120 162 128 175 145 175
+    A 17 17 0 0 1 145 209
+    A 17 17 0 0 1 145 175"/>
+</svg>

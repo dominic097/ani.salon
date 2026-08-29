@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-33 32 200 200" width="200" height="200" role="img" aria-label="ani mark">
+  <!-- ANI mark: the wire a, starting with a flick at the baseline and tied off in the sun-knot on top of its stem -->
+  <circle cx="110" cy="79" r="15" fill="#ffd97a"/>
+  <path d="M 124 214 A 14 14 0 0 1 110 200 L 110 150 A 50 50 0 0 0 10 150 A 50 50 0 0 0 110 150 L 110 100 A 21 21 0 1 1 110 58 A 21 21 0 1 1 110 100"
+        fill="none" stroke="#b5674a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

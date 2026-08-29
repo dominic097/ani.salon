@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="32 72 160 160" width="240" height="240" role="img" aria-label="ani mark">
+  <!-- fuse-profile mark: the wire a — bun-curl (kolam loop) starts the stroke, the bowl's left edge is her profile, the stroke ties off in a kolam loop at the foot; the sun rests as a pottu on her forehead. -->
+  <circle cx="92" cy="119" r="6.5" fill="#ffd97a"/>
+  <path d="M 159.5 112.5
+           A 9.5 9.5 0 1 0 150 103
+           L 150 150
+           C 150 124 140 105 120 101.5
+           C 108 99.6 96 102.4 88 109.4
+           C 80 116 75 124 72.8 130.6
+           C 71.9 133.4 70.7 135.5 69.4 137.6
+           C 64.7 144.4 60 151.3 55.9 157.2
+           C 54.4 158.7 54.4 160 56.1 160.5
+           C 57.9 160.9 59.8 161 61.2 160.8
+           C 63.6 161.5 64.3 162.6 64.1 164.4
+           C 60.5 164.9 57.5 166.4 56.9 169.2
+           C 56.4 172 58 174.3 61 174.9
+           C 63.5 175.5 64.3 176.4 63.9 178
+           C 61.3 179 59.9 181.4 59.9 184.2
+           C 59.9 187.2 62 189.8 65.5 190.9
+           C 72 193.6 86 199.2 103 199.9
+           C 122 200.6 150 194 150 150
+           L 150 200
+           A 14 14 0 0 0 164 214"
+        fill="none" stroke="#b5674a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

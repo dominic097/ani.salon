@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 36 348 204" width="348" height="204" role="img" aria-label="ani">
+  <!-- ANI monoline wordmark: one continuous wire of even weight (terracotta), tied off in a knot that dots the i; sun seed inside the knot -->
+  <circle cx="290" cy="78" r="15" fill="#ffd97a"/>
+  <path d="M 110 100 L 110 150 A 50 50 0 0 0 10 150 A 50 50 0 0 0 110 150 L 110 200 A 20 20 0 0 0 150 200 L 150 150 A 50 50 0 0 1 250 150 L 250 200 A 20 20 0 0 0 290 200 L 290 99 A 21 21 0 1 1 290 57 A 21 21 0 1 1 290 99"
+        fill="none" stroke="#b5674a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45 -28 156 156" width="156" height="156" role="img" aria-label="ANI mark">
+  <title>ANI mark</title>
+  <!--
+    ANI - "fuse-bindi" mark: the kolam A alone, square, for avatars.
+    Same DNA as the wordmark: one continuous terracotta stroke - crossbar into
+    foot loop into left diagonal, rounded apex - with the single sun-gold bindi
+    cradled on the crossbar at the third eye. Reads on cream and on ink as-is.
+  -->
+  <g fill="none" stroke="#b5674a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 77.5,64 L -2.97,64 A 18.75 18.75 0 1 0 15.03,87.97 L 38.47,7.16 A 12 12 0 0 1 61.53,7.16 L 88.45,100"/>
+  </g>
+  <circle cx="50" cy="46" r="10.5" fill="#ffd97a"/>
+</svg>

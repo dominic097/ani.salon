@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="256" height="256" role="img" aria-label="ANI mark">
+  <!-- ANI mark: the A alone, its circular counter set as a sun bindi. Same geometry as the wordmark. -->
+  <g transform="translate(17 14)" fill="#b5674a">
+    <circle cx="47" cy="58" r="12" fill="#ffd97a"/>
+    <path fill-rule="evenodd" d="M43 0 H51 L94 100 L76.58 100 L68.41 81 L25.59 81 L17.42 100 L0 100 Z M35 58 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 Z"/>
+  </g>
+</svg>

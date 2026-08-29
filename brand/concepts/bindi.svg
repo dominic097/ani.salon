@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-16 -16 268 132" width="536" height="264" role="img" aria-label="ANI">
+  <!--
+    ANI — primary wordmark. Custom geometric monoline caps: cap height 100, stem 16, flat-top A.
+    The only ornament is the A's counter: a perfect circle (r 12) — the bindi — set in sun #ffd97a.
+    Letterforms in terracotta #b5674a so the same file reads on cream #fdf8f2 and on ink #3a2e2a.
+    Single-colour use: delete the circle; the counter stays as negative space.
+  -->
+  <g fill="#b5674a">
+    <circle cx="47" cy="58" r="12" fill="#ffd97a"/>
+    <!-- A (flat apex 8 wide; counter cut with evenodd) -->
+    <path fill-rule="evenodd" d="M43 0 H51 L94 100 L76.58 100 L68.41 81 L25.59 81 L17.42 100 L0 100 Z M35 58 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 Z"/>
+    <!-- N (diagonal thickness 16, edges through the inner stem corners) -->
+    <path d="M111 0 H127 V100 H111 Z M175 0 H191 V100 H175 Z M111 4.87 L127 0 L191 95.13 L175 100 Z"/>
+    <!-- I -->
+    <path d="M220 0 H236 V100 H220 Z"/>
+  </g>
+</svg>

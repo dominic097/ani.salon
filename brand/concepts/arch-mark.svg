@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22 -13.5 124 124" width="124" height="124" role="img" aria-label="ANI mark">
+  <title>ANI mark</title>
+  <g fill="none" stroke="#b5674a" stroke-width="16" stroke-linecap="butt">
+    <!-- the arched mirror A: flat feet, round top, low crossbar -->
+    <path d="M 6,100 L 6,39 A 34,34 0 0 1 74,39 L 74,100"/>
+    <path d="M 6,72 L 74,72"/>
+  </g>
+  <!-- bindi, optically enlarged for avatar sizes -->
+  <circle cx="40" cy="37" r="12" fill="#8a6aa3"/>
+</svg>

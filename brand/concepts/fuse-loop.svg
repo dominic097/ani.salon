@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -17 373 250" width="373" height="250" role="img" aria-label="ani">
+  <title>ani — kolam wire</title>
+  <!-- one continuous kolam line: begins in the closed tail-loop of the a, ends in the closed loop
+       under the i. perfect circles only (bowl r50, arch r50, loops r17, bindi ring). even wire 15.
+       the woman's profile faces left in the gap between a and n, drawn by the n's left side. -->
+  <circle cx="145" cy="192" r="11" fill="#ffd97a"/>
+  <circle cx="315" cy="22" r="11" fill="#ffd97a"/>
+  <path fill="none" stroke="#b5674a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" d="
+    M 120 60
+    L 120 110
+    A 50 50 0 0 1 20 110
+    A 50 50 0 0 1 120 110
+    L 120 154
+    C 120 162 128 175 145 175
+    A 17 17 0 0 1 145 209
+    A 17 17 0 0 1 145 175
+    C 154 175 170 171 170 160
+    L 171 152.5
+    C 171.8 148.2 168 146.2 164.4 142.9
+    C 161.6 139.4 164.8 134.2 169.6 132.5
+    C 165.4 130.6 163.6 128.4 164.6 125.9
+    C 165.6 123.3 167.4 121.7 169 120.2
+    L 158.6 112.4
+    L 162.4 105.2
+    L 170.6 99.2
+    C 171.4 96.2 168.9 95.5 168.3 92.9
+    C 168.9 90.3 174.8 88.5 176.5 85.5
+    A 50 50 0 0 1 270 110
+    L 270 160
+    A 22.5 15 0 0 0 315 160
+    L 315 60
+    L 315 160
+    C 315 167 321 175 328 175
+    A 17 17 0 0 1 328 209
+    A 17 17 0 0 1 328 175"/>
+  <circle cx="315" cy="22" r="14.5" fill="none" stroke="#b5674a" stroke-width="15"/>
+</svg>
