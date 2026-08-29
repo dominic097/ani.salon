@@ -1,11 +1,11 @@
-# [Salon Name] — Salon Website
+# ANI — Salon Website
 
 Single-file static site (`index.html`) — no build step. Open it in a browser, or host on Netlify / Vercel / GitHub Pages / any web host by uploading the file.
 
 Design direction: a blend of "Soft Romantic" (blush/cream, serif), "Inner Child" (handwritten notes, playful copy) and "Bloom" (sage/lilac organic shapes). Design explorations live in `design/`.
 
 ## Fill in before launch
-- **Salon name**: search & replace `[Salon Name]`.
+- **Salon name**: ANI (logo in the header and footer of `index.html`).
 - **Contact details**: address, phone, email and hours in the `#book` section; `SALON_EMAIL` in the script.
 - **Photos**: stock photos are in `images/` (see table below) — swap in your own with the same filenames.
 - **Testimonials**: replace the `[name]` placeholders with real quotes.
