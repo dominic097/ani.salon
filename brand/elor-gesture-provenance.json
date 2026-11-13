@@ -1,0 +1,28 @@
+{
+  "brand": "èlor",
+  "font_basis": "Cormorant Garamond, variable weight 500; regular e/o/r with an adapted italic l",
+  "source": "https://github.com/google/fonts/tree/main/ofl/cormorantgaramond",
+  "license": "SIL Open Font License 1.1; copy in fonts/OFL.txt",
+  "modifications": [
+    "Outlined glyphs, no font dependency",
+    "Optical spacing between all four glyphs",
+    "Slight organic rise on e crossbar and o contour",
+    "Shortened, more upright italic l with curved foot",
+    "Custom grave accent sized to remain legible in headers",
+    "Horizontal optical expansion and tight transparent viewBox",
+    "Favicon uses the same e/grave with slight stroke reinforcement"
+  ],
+  "limitations": "A font-based vector interpretation of the approved image-generated Gesture sketch, not an exact trace. The l, e, and r terminal details differ slightly. All output shapes are editable vector paths; no raster tracing artifacts.",
+  "wordmark_viewBox": [
+    -22,
+    -602.5333333333333,
+    1619.1194514874896,
+    638.3775217319783
+  ],
+  "suggested_header": "width approximately 120px; height auto; color #b5674a",
+  "footer": "color #fdf8f2 on #3a2e2a",
+  "production_files": [
+    "elor-gesture-wordmark.svg",
+    "elor-gesture-mark.svg"
+  ]
+}
