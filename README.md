@@ -1,4 +1,10 @@
-# ANI — Salon Website
+# Èlor Studio & Academy
+
+Start with the [Èlor handoff](_handoff/README.md) for the live release, design decisions, to-do list, and QA tools.
+
+## Earlier ANI prototype
+
+The notes in this section describe the earlier ANI design exploration.
 
 Single-file static site (`index.html`) — no build step. Open it in a browser, or host on Netlify / Vercel / GitHub Pages / any web host by uploading the file.
 
