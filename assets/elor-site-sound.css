@@ -1,0 +1,26 @@
+.site-sound-toggle[hidden] { display: none; }
+
+.site-sound-toggle {
+  position: fixed;
+  z-index: 90;
+  inset-inline-start: max(12px, env(safe-area-inset-left));
+  inset-block-end: max(12px, env(safe-area-inset-bottom));
+  min-block-size: 44px;
+  max-inline-size: calc(100% - 24px);
+  padding: 7px 12px;
+  border: 1px solid #a58c70;
+  border-radius: 7px;
+  background: #21191af2;
+  color: #f6ebdc;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.site-sound-toggle[aria-pressed="true"] {
+  background: #504337;
+  border-color: #dbc19f;
+}
+
+.site-sound-toggle:focus-visible { outline: 2px solid #f6ebdc; outline-offset: 3px; }

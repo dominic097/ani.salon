@@ -157,11 +157,13 @@
   <link rel="stylesheet" href="assets/elor-bridal-painter.css?v=photo-face">
   <link rel="stylesheet" href="assets/elor-academy-guide.css">
   <link rel="stylesheet" href="assets/elor-academy-mentor.css">
+  <link rel="stylesheet" href="assets/elor-site-sound.css">
   <noscript><style>.destination-panel .reveal, #unveiling .reveal { opacity:1; transform:none; }</style></noscript>
 </head>
 <body>
   <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
+  <button id="siteSoundToggle" class="site-sound-toggle" type="button" hidden aria-pressed="false">Mute site sounds</button>
   <div class="opening-veil" aria-hidden="true"><div class="opening-veil-inner"><img src="assets/elor-logo.svg?v=ivory" alt=""><span>Studio &amp; Academy · Chennai</span><i class="opening-veil-line"></i></div></div>
   <header class="site-header" id="siteHeader">
     <div class="brand-side">A beauty house<br>in the making</div>
@@ -417,6 +419,8 @@
     <section id="invitation" class="finale" aria-labelledby="finalHeading"><span class="eyebrow gold reveal">The story is just beginning</span><h2 id="finalHeading" class="reveal">Come as<br><em>you are.</em></h2><span class="invitation-guide" aria-hidden="true"></span><p class="reveal">èlor is taking shape in Perumbakkam, Chennai. Stay close as we bring this new world of beauty into being.</p><a class="final-link reveal" href="mailto:helen@elor.studio?subject=Hello%20%C3%A8lor%20%E2%80%94%20keep%20me%20updated">Join the conversation</a></section>
   </main>
   <footer class="footer"><div class="footer-top"><div><img class="footer-logo" src="assets/elor-logo.svg?v=ivory" alt="èlor"><p class="footer-tag">Not a destination.<br>A different state of mind.</p></div><div class="footer-col"><h3>Discover</h3><a href="#philosophy">Our philosophy</a><a href="#worlds">The experiences</a><a href="#bridal-worlds">The bridal worlds</a><a href="#ritual">The ritual</a><a href="#lookbook">The lookbook</a><a href="#light-room">The Light Room</a><a href="#house">The space</a><a href="#academy">The academy</a></div><div class="footer-col"><h3>èlor, in the making</h3><span>Perumbakkam, Chennai, India</span><span>Opening details to be announced</span><a href="mailto:helen@elor.studio">helen@elor.studio</a><a href="https://www.instagram.com/elor_makeover/" target="_blank" rel="noopener" aria-label="@elor_makeover on Instagram">@elor_makeover</a><a href="https://www.facebook.com/share/1EEv4g789G/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a><a href="tel:+919442031002">+91 9442031002</a></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> èlor Studio &amp; Academy · A vision in progress</span><span class="preview-pill">V15 / compact destination</span></div></footer>
+  <audio id="welcomeSound" preload="none" src="assets/elor-welcome-preview.mp3"></audio>
+  <script type="module" src="assets/elor-site-sound.js"></script>
   <script defer src="assets/elor-unveil.js"></script>
   <script defer src="assets/elor-motion.js?v=discover"></script>
   <script>
