@@ -8,7 +8,7 @@ const family = guide?.querySelector('.arrival-family');
 
 if (image && arrival && family) {
   const arrivalImage = image.src;
-  const poseUrl = new URL('./elor-arrival-sketchbook-open.webp?v=arrival-likeness', import.meta.url);
+  const poseUrl = new URL('./elor-arrival-sketchbook-open.webp?v=owner-likeness', import.meta.url);
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const curtain = document.querySelector('.opening-veil')?.getAnimations?.()
     .find(animation => animation.animationName === 'veil-exit');
