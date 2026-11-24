@@ -1,0 +1,90 @@
+.hero-choices {
+  --hero-miniature-size: clamp(50px, 5.4vw, 72px);
+  position: relative;
+}
+
+.hero-miniatures {
+  position: absolute;
+  z-index: 1;
+  inset-inline: 0;
+  inset-block-end: calc(100% + 1px);
+  block-size: var(--hero-miniature-size);
+  pointer-events: none;
+}
+
+.hero-miniatures::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset-inline: -1px;
+  /* Both resting poses meet the ledge at their hands, with shoes in front. */
+  inset-block-start: 73.5%;
+  inset-block-end: -1px;
+  border-inline: 1px solid #e6c69d50;
+  border-block-start: 2px solid #e3bf87;
+  background: linear-gradient(#38281ded, #1b1711ed 62%, #0b0d0be8);
+  box-shadow: inset 0 1px #ffe5b23d;
+}
+
+.hero-miniature {
+  --perched-art: url("elor-atelier-miniatures.webp");
+  position: absolute;
+  aspect-ratio: 1;
+  background-image: var(--perched-art);
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  filter: drop-shadow(0 2px 4px #100a08a0);
+  pointer-events: none;
+  transform-origin: 50% 94%;
+}
+
+.hero-miniature {
+  z-index: 1;
+  inset-block-end: 0;
+  inset-inline-start: clamp(
+    calc(var(--hero-miniature-size) / 2),
+    var(--hero-miniature-perch, 16.67%),
+    calc(100% - var(--hero-miniature-size) / 2)
+  );
+  margin-inline-start: calc(var(--hero-miniature-size) / -2);
+  inline-size: var(--hero-miniature-size);
+  background-position: left top;
+}
+
+.hero-miniature-right {
+  --hero-miniature-perch: var(--hero-miniature-neighbor, 50%);
+  --perched-greeting-lean: -4deg;
+  background-position: right top;
+}
+
+@media (max-height: 740px) and (min-width: 761px) {
+  .hero-choices { --hero-miniature-size: 46px; }
+}
+
+@media (max-width: 760px) {
+  .hero-choices {
+    --hero-miniature-size: clamp(41px, 11vw, 50px);
+    margin-block-start: calc(var(--hero-miniature-size) + 3px);
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-footer { flex-wrap: wrap; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-miniature {
+    transition: inset-inline-start 280ms cubic-bezier(.22,.61,.36,1);
+  }
+
+  [data-perched-motion="greet"] { animation: elor-perched-greet 840ms ease-in-out both; }
+
+  [data-perched-motion="greet"] + .hero-miniature-right {
+    animation: elor-perched-greet 730ms 100ms ease-in-out both;
+  }
+}
+
+@keyframes elor-perched-greet {
+  0%, 100% { transform: none; }
+  50% { transform: rotate(var(--perched-greeting-lean, 3deg)); }
+}

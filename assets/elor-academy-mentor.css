@@ -1,0 +1,49 @@
+.academy-heading-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(9px, 1.25vw, 18px);
+  inline-size: 100%;
+}
+
+#academy .academy-heading-row h2 {
+  font-size: clamp(43px, 5.1vw, 94px);
+}
+
+#academy .academy-heading-row h2 em {
+  white-space: nowrap;
+}
+
+.academy-mentor {
+  position: relative;
+  display: block;
+  inline-size: clamp(95px, 10.6vw, 155px);
+  aspect-ratio: 1;
+  background: url("elor-academy-mentor.webp") center / contain no-repeat;
+  filter: drop-shadow(0 4px 10px #111b);
+  pointer-events: none;
+}
+
+.academy-mentor canvas {
+  position: absolute;
+  inset-inline-start: var(--academy-mentor-canvas-x);
+  inset-block-start: var(--academy-mentor-canvas-y);
+  inline-size: var(--academy-mentor-canvas-width);
+  block-size: var(--academy-mentor-canvas-height);
+  mask-image: radial-gradient(ellipse 56% 58% at 50% 50%, #000 70%, transparent 100%);
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  #academy .academy-heading-row h2 {
+    font-size: clamp(42px, 10vw, 68px);
+  }
+
+  .academy-mentor {
+    inline-size: clamp(89px, 27vw, 125px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .academy-mentor canvas { visibility: hidden; }
+}

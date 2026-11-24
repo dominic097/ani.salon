@@ -1,0 +1,64 @@
+.arrival-guide {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.arrival-guide[hidden] { display: none; }
+
+.arrival-photo-plane {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  inline-size: var(--arrival-photo-width);
+  block-size: var(--arrival-photo-height);
+  transform: translate(-50%, -50%);
+}
+
+/* Coordinates follow the uncropped arrival photo so the pair stays anchored to the paving. */
+.arrival-family {
+  position: absolute;
+  inset-inline-start: 67%;
+  inset-block-end: 21.5%;
+  inline-size: 10.6%;
+  aspect-ratio: 384 / 524;
+  transform: translateX(-50%);
+  isolation: isolate;
+  background: url("elor-arrival-sketchbook-open.webp?v=arrival-likeness") center / contain no-repeat;
+  filter: saturate(.88) brightness(.93);
+}
+
+.arrival-family::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: auto -5% 0;
+  block-size: 9%;
+  background:
+    radial-gradient(ellipse 25% 39% at 36% 60%, #22170fc7, transparent 85%),
+    radial-gradient(ellipse 17% 37% at 77% 57%, #20160ebf, transparent 85%);
+}
+
+.arrival-family-motion {
+  display: none;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.arrival-family[data-motion-ready] {
+  background-image: none;
+}
+
+.arrival-family[data-motion-ready] > .arrival-family-motion {
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .room-visual:has(> .arrival-guide:not([hidden])) .room-visual-label {
+    inset-inline-start: 16px;
+    inset-block-end: 16px;
+    font-size: clamp(23px, 5.8vw, 30px);
+  }
+}

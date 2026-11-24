@@ -1,0 +1,43 @@
+.destination-tabs {
+  --academy-guide-gutter: max(calc((100% - 960px) / 2), calc(clamp(32px, 4.2vw, 48px) + 14px));
+  padding-inline-end: var(--academy-guide-gutter);
+}
+
+.academy-guide {
+  --academy-guide-height: clamp(46px, 4.4vw, 55px);
+  --academy-guide-width: calc(var(--academy-guide-height) * .65);
+  position: absolute;
+  inset-inline-end: calc(var(--academy-guide-gutter) - var(--academy-guide-width) - 6px);
+  inset-block-start: 50%;
+  margin-block-start: calc(var(--academy-guide-height) / -2);
+  inline-size: var(--academy-guide-width);
+  block-size: var(--academy-guide-height);
+  overflow: clip;
+  pointer-events: none;
+}
+
+.academy-guide-art {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: calc((100% - var(--academy-guide-height)) / 2);
+  inline-size: var(--academy-guide-height);
+  background: url("elor-academy-guide.webp?v=brush") center / contain no-repeat;
+  filter: drop-shadow(0 2px 2px #140e08a0);
+}
+
+.academy-guide-art canvas {
+  display: none;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.academy-guide-art[data-academy-gl] { background-image: none; }
+.academy-guide-art[data-academy-gl] canvas { display: block; }
+
+@media (max-width: 560px) {
+  .academy-guide {
+    inset-block-start: auto;
+    inset-block-end: 7px;
+    margin-block-start: 0;
+  }
+}

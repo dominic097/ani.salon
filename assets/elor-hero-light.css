@@ -1,0 +1,52 @@
+.hero-light {
+  --hero-light-color: #e2ab76;
+  --hero-light-edge: #c27561;
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  contain: paint;
+}
+.hero[data-hero-opening="heritage"] .hero-light {
+  --hero-light-color: #edb365;
+  --hero-light-edge: #c07b6a;
+}
+.hero[data-hero-opening="future"] .hero-light {
+  --hero-light-color: #a3c5bd;
+  --hero-light-edge: #b18bc4;
+}
+.hero-light::before {
+  content: "";
+  position: absolute;
+  inset: -12% -5% -12% 38%;
+  background:
+    radial-gradient(ellipse at 65% 26%, var(--hero-light-color), transparent 61%),
+    linear-gradient(114deg, transparent 33%, var(--hero-light-edge) 58%, transparent 80%);
+  opacity: .15;
+  animation: hero-light-sweep 4.2s ease-in-out both;
+  animation-play-state: paused;
+}
+.hero-light canvas {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.hero[data-hero-renderer="webgl"] .hero-light::before { display: none; }
+.hero[data-hero-renderer="webgl"] .hero-light canvas { display: block; }
+
+.hero:not([data-hero-motion]) .hero-smooth-film img,
+.hero:not([data-hero-motion]) .hero-directed-scene img,
+.hero:not([data-hero-motion]) .hero-gridline::after {
+  animation-play-state: paused;
+}
+.hero[data-hero-motion] .hero-light::before { animation-play-state: running; }
+@keyframes hero-light-sweep {
+  0% { transform: translate3d(8%, -5%, 0) rotate(-8deg); opacity: .10; }
+  48% { opacity: .21; }
+  100% { transform: translate3d(-12%, 12%, 0) rotate(12deg); opacity: .15; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-light { display: none; }
+}

@@ -1,0 +1,23 @@
+.hero-atelier-live {
+  position: absolute;
+  z-index: 2;
+  inset: -18px -12px -8px;
+  display: block;
+  width: calc(100% + 24px);
+  height: calc(100% + 26px);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero-miniatures[data-atelier-renderer="three"] .hero-atelier-live {
+  visibility: visible;
+}
+
+.hero-miniatures[data-atelier-renderer="three"] .hero-miniature {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-miniatures[data-atelier-renderer="three"] .hero-atelier-live { visibility: hidden; }
+  .hero-miniatures[data-atelier-renderer="three"] .hero-miniature { visibility: visible; }
+}

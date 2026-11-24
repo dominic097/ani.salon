@@ -1,0 +1,198 @@
+.destination-explorer {
+  background: var(--ink);
+}
+
+.destination-tabs {
+  position: sticky;
+  top: 74px;
+  z-index: 45;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  padding: 8px max(18px, calc((100% - 960px) / 2));
+  border-bottom: 1px solid #d4b58b38;
+  background: #101312;
+}
+
+.destination-tabs[hidden],
+.destination-panel[hidden] {
+  display: none;
+}
+
+.destination-tabs a {
+  display: grid;
+  place-items: center;
+  min-height: 46px;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  color: #e7dfd1;
+  font-size: 14px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.destination-tabs a:hover {
+  background: #ffebce12;
+}
+
+.destination-tabs a:is([aria-selected="true"], [aria-current="location"]) {
+  border-color: #d4b58b88;
+  background: #d4b58b24;
+  color: #f8e5c7;
+}
+
+.destination-tabs a:focus-visible {
+  outline-offset: -3px;
+}
+
+.destination-panel section {
+  scroll-margin-top: 66px;
+}
+
+.destination-panel > :is(.architecture, .folio, .light-room),
+.destination-more :is(.constellation, .journal) {
+  padding-block: clamp(42px, 6vw, 88px);
+}
+
+.destination-panel .architecture-top,
+.destination-panel .light-room-head {
+  margin-bottom: clamp(24px, 4vw, 45px);
+}
+
+.destination-panel :is(.architecture-top, .folio-top, .light-room-head) h2 {
+  font-size: clamp(48px, 7vw, 104px);
+}
+
+.destination-panel .room-stage,
+.destination-panel .room-visual {
+  min-height: 0;
+}
+
+.destination-panel .room-visual {
+  height: clamp(400px, 55svh, 610px);
+}
+
+.destination-panel .ritual-chapter {
+  min-height: min(650px, 82svh);
+  padding-block: clamp(58px, 8vw, 110px);
+}
+
+.destination-panel .lookbook-filters {
+  margin-block: 24px 0;
+}
+
+.destination-panel .folio-gallery {
+  margin-top: 22px;
+}
+
+.destination-panel .academy-copy {
+  padding-block: clamp(48px, 7vw, 96px);
+}
+
+.destination-panel .academy-image {
+  align-self: start;
+  height: clamp(530px, 84svh, 840px);
+  min-height: 0;
+}
+
+.destination-more {
+  border-top: 1px solid #d4b58b38;
+  background: #151817;
+}
+
+.destination-more > summary {
+  padding: 16px clamp(18px, 5vw, 85px);
+  color: #ecd8bd;
+  cursor: pointer;
+}
+
+.destination-more > summary:focus-visible {
+  outline-offset: -4px;
+}
+
+.destination-explorer[data-destination-scroll] .destination-panel > :is(.architecture, .folio, .light-room) {
+  padding-block: clamp(34px, 4.2vw, 65px);
+}
+
+.destination-explorer[data-destination-scroll] .ritual-chapter {
+  min-height: min(590px, 76svh);
+  padding-block: clamp(44px, 5vw, 72px);
+}
+
+.destination-explorer[data-destination-scroll] .academy {
+  min-height: 0;
+}
+
+.destination-explorer[data-destination-scroll] .academy-copy {
+  padding-block: clamp(38px, 4vw, 65px);
+}
+
+.destination-explorer[data-destination-scroll] .room-rail {
+  padding-block: clamp(24px, 3vw, 44px);
+}
+
+.destination-explorer[data-destination-scroll] .room-menu button {
+  padding-block: 14px;
+}
+
+.destination-explorer[data-destination-scroll] .room-visual {
+  height: 100%;
+  min-height: clamp(350px, 54svh, 600px);
+}
+
+.destination-explorer[data-destination-scroll] .folio-gallery:not(:has(> .folio-card[hidden])) {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(10px, 1.4vw, 20px);
+}
+
+.destination-explorer[data-destination-scroll] .folio-gallery:not(:has(> .folio-card[hidden])) figcaption {
+  inset-inline: 10px;
+  font-size: clamp(15px, 1.45vw, 20px);
+}
+
+@media (max-width: 760px) {
+  .destination-panel section {
+    scroll-margin-top: 82px;
+  }
+
+  .destination-panel .architecture-top h2 {
+    margin-bottom: 14px;
+  }
+
+  .destination-panel .room-visual {
+    height: clamp(260px, 48svh, 390px);
+  }
+
+  .destination-panel .room-rail {
+    padding-block: 18px;
+  }
+
+  .destination-panel .room-menu button {
+    min-height: 44px;
+    padding-block: 10px;
+  }
+
+  .destination-panel .academy-image {
+    min-height: 0;
+    height: clamp(290px, 46svh, 400px);
+  }
+}
+
+@media (max-width: 560px) {
+  .destination-tabs {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    padding-inline: 12px;
+  }
+
+  .destination-tabs a {
+    grid-column: span 2;
+  }
+
+  .destination-tabs a:nth-last-child(-n + 2) {
+    grid-column: span 3;
+  }
+
+  .destination-panel section {
+    scroll-margin-top: 132px;
+  }
+}

@@ -1,0 +1,37 @@
+/* V14: fluid mobile composition and progressive real-time light rendering. */
+html,body{max-width:100%;overflow-x:clip;-webkit-text-size-adjust:100%}
+main,main section{min-width:0}
+.light-room-head>div,.light-room-stage,.light-room-stage-copy{min-width:0}
+.light-room-gpu{position:absolute;inset:0;z-index:3;width:100%;height:100%;opacity:0;pointer-events:none;transition:opacity 1.15s ease;mix-blend-mode:screen}
+.light-room-stage.webgl-ready .light-room-gpu{opacity:.82}
+.light-room-stage.webgl-ready .light-room-sunbeams{animation:none;opacity:0;transition:opacity 1.1s ease}
+.light-room-stage.webgl-ready .light-room-sunwash{animation:none;opacity:.18;transition:opacity 1.1s ease}
+@media(max-width:760px){
+ .light-room{padding:78px 18px 70px}
+ .light-room-head{margin-bottom:32px}
+ .light-room-head h2{font-size:clamp(46px,11.2vw,74px);line-height:.99;letter-spacing:-.055em;margin-top:19px;max-width:100%}
+ .light-room-stage{height:clamp(485px,69svh,660px);max-height:none;min-height:0;width:100%}
+ .light-room-portrait{object-position:65% center}
+ .light-room-stage-copy{left:18px;right:18px;bottom:83px;max-width:calc(100% - 36px)}
+ .light-room-stage-copy h3{font-size:clamp(37px,9.4vw,54px);line-height:1.04;letter-spacing:-.052em;margin-top:14px;overflow-wrap:normal}
+ .light-room-stage-copy span{font-size:10px;letter-spacing:.09em;line-height:1.5}
+ .light-room-looks{grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+ .light-room-look{min-width:0;min-height:72px;padding:14px 4px;text-align:center}
+ .light-room-look span{font-size:9px;letter-spacing:0;line-height:1.35}
+ .light-room-look strong{font-size:clamp(13px,3.7vw,19px);line-height:1.18;overflow-wrap:break-word}
+ .light-room-stage.webgl-ready .light-room-gpu{opacity:.68}
+ .hero,.hero-content,.hero-summary,.world-content{min-width:0}
+ .world-content h2,.unveil-head h2,.chapter-intro h2{overflow-wrap:normal;max-width:100%}
+}
+@media(max-width:370px){
+ .light-room-head h2{font-size:clamp(41px,11vw,50px)}
+ .light-room-stage-copy h3{font-size:clamp(34px,9.3vw,40px)}
+ .light-room-look strong{font-size:13px}
+ .light-room-stage{height:490px}
+ .hero-choices{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+ .light-room-gpu{display:none!important}
+ .light-room-stage.webgl-ready .light-room-sunbeams{opacity:.28;transition:none}
+ .light-room-stage.webgl-ready .light-room-sunwash{opacity:.60;transition:none}
+}

@@ -1,0 +1,51 @@
+/* The standing miniatures stay below the silk grip and above the captions. */
+.unveil-miniatures {
+  --miniature-size: clamp(74px, 12vw, 164px);
+  --miniature-edge: clamp(12px, 5%, 66px);
+  position: absolute;
+  z-index: 2;
+  inset-inline: 0;
+  inset-block-end: clamp(53px, 10%, 75px);
+  block-size: var(--miniature-size);
+  pointer-events: none;
+}
+
+.unveil-miniature {
+  position: absolute;
+  inset-block-end: 0;
+  inline-size: var(--miniature-size);
+  aspect-ratio: 1;
+  background-image: url("elor-atelier-miniatures.webp");
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  filter: drop-shadow(0 5px 7px #170e0e70);
+}
+
+.unveil-miniature-left {
+  inset-inline-start: var(--miniature-edge);
+  background-position: left bottom;
+  clip-path: polygon(0 0, 47% 0, 47% 3%, 67% 3%, 67% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.unveil-miniature-right {
+  inset-inline-end: var(--miniature-edge);
+  background-position: right bottom;
+  clip-path: inset(3% 0 0);
+}
+
+@media (max-width: 760px) {
+  .unveil-miniatures {
+    --miniature-size: clamp(72px, 21vw, 110px);
+    --miniature-edge: clamp(22px, 6%, 44px);
+    inset-block-end: 52px;
+  }
+}
+
+.unveil-miniature canvas {
+  display: none;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.unveil-miniature[data-unveiling-gl] { background-image: none; }
+.unveil-miniature[data-unveiling-gl] canvas { display: block; }

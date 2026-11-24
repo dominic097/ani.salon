@@ -1,0 +1,222 @@
+/* èlor V8 / editorial chapters and curated gallery */
+.desktop-nav a{font-size:12px}
+.mobile-menu{overflow-y:auto;overscroll-behavior:contain}
+.eyebrow{font-size:12px}
+.chapter-intro{max-width:1510px;margin:0 auto 70px;display:grid;grid-template-columns:1.5fr .55fr;gap:8vw;align-items:end}
+.chapter-intro h2{font:400 clamp(64px,8vw,132px)/.91 var(--serif);letter-spacing:-.07em;margin:25px 0 0}
+.chapter-intro h2 em{color:#d4b58b}
+.chapter-intro p{font-size:17px;line-height:1.9;color:#bcb8ad;max-width:390px;margin:0}
+.chapter-link{display:inline-block;border-bottom:1px solid #ccb48e;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:0 0 11px;color:#edd6b2;transition:color .25s}
+.chapter-link:hover{color:white}
+
+.bridal-worlds{background:#151615;color:#eee7df;padding:145px clamp(20px,5vw,90px);overflow:hidden}
+.bridal-worlds-layout{max-width:1510px;margin:auto;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(340px,.6fr);min-height:700px;border:1px solid #dec7a63d}
+.bridal-worlds-image{position:relative;background:#262624;min-height:700px;overflow:hidden}
+.bridal-worlds-image::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#070807b5,transparent 52%),linear-gradient(90deg,#10100f45,transparent)}
+.bridal-worlds-image img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:opacity .45s ease,transform 1.2s ease;transform:scale(1.02)}
+.bridal-worlds-image img.changing{opacity:.36;transform:scale(1.08)}
+.bridal-photo{position:absolute;inset:0}
+.bridal-unbound-light,.bridal-unbound-grass{display:none;position:absolute;pointer-events:none}
+.bridal-worlds-image[data-bridal-look="modern"] {
+  --unbound-x:50%;
+  --unbound-y:8%;
+  container-type:size;
+}
+.bridal-worlds-image[data-bridal-look="modern"] img {
+  object-position:var(--unbound-x) var(--unbound-y);
+  transform:none;
+}
+/* Align the light with the object-fit portrait at wide and tall aspect ratios. */
+.bridal-worlds-image[data-bridal-look="modern"] .bridal-unbound-light {
+  display:block;
+  left:var(--unbound-x);
+  top:var(--unbound-y);
+  width:100%;
+  height:100%;
+  width:max(100%,66.643cqh);
+  height:max(100%,150.054cqw);
+  transform:translate(calc(-1 * var(--unbound-x)),calc(-1 * var(--unbound-y)));
+}
+.bridal-unbound-light::before,.bridal-unbound-light::after{content:"";position:absolute;inset:0;mix-blend-mode:screen}
+.bridal-unbound-light::before {
+  background:radial-gradient(ellipse 19% 29% at 55% 12%,#fff1d56e,transparent 82%);
+  opacity:.62;
+}
+.bridal-unbound-light::after {
+  background:
+    radial-gradient(ellipse .8% .6% at 60.2% 17.9%,#fff2ccd9,transparent),
+    radial-gradient(ellipse .6% .5% at 64.9% 24.4%,#ffefbfde,transparent),
+    radial-gradient(ellipse 1.1% .7% at 43.2% 33%,#f7d5a0ca,transparent);
+  opacity:.25;
+}
+.bridal-worlds-image[data-bridal-look="modern"] .bridal-unbound-grass{display:block;inset:0}
+.bridal-unbound-grass::before,.bridal-unbound-grass::after {
+  content:"";
+  position:absolute;
+  bottom:-4%;
+  height:45%;
+  width:24%;
+  background-image:url("bridal-detail.webp");
+  background-size:auto 195%;
+  background-repeat:no-repeat;
+  filter:sepia(.48) saturate(.75) blur(1px);
+  opacity:.32;
+  transform-origin:bottom;
+}
+.bridal-unbound-grass::before {
+  left:-2%;
+  background-position:left bottom;
+  -webkit-mask-image:radial-gradient(ellipse at left bottom,#000 8%,transparent 71%);
+  mask-image:radial-gradient(ellipse at left bottom,#000 8%,transparent 71%);
+}
+.bridal-unbound-grass::after {
+  right:-2%;
+  background-position:right bottom;
+  -webkit-mask-image:radial-gradient(ellipse at right bottom,#000 8%,transparent 71%);
+  mask-image:radial-gradient(ellipse at right bottom,#000 8%,transparent 71%);
+}
+@media(prefers-reduced-motion:no-preference) {
+  .bridal-image-in-view[data-bridal-look="modern"] .bridal-photo {
+    transform-origin:55% 28%;
+    animation:elor-unbound-pullback 4.8s cubic-bezier(.2,.7,.26,1) both;
+  }
+  .bridal-image-in-view[data-bridal-look="modern"] .bridal-unbound-light::before{animation:elor-unbound-keylight 4.8s ease-out both}
+  .bridal-image-in-view[data-bridal-look="modern"] .bridal-unbound-light::after{animation:elor-unbound-glint 4.8s ease-in-out both}
+  .bridal-image-in-view[data-bridal-look="modern"] .bridal-unbound-grass::before,
+  .bridal-image-in-view[data-bridal-look="modern"] .bridal-unbound-grass::after{animation:elor-unbound-breeze 4.8s ease-in-out both}
+  .bridal-image-in-view[data-bridal-look="modern"] .bridal-unbound-grass::after{animation-direction:reverse}
+}
+@keyframes elor-unbound-pullback{from{transform:scale(1.035)}to{transform:none}}
+@keyframes elor-unbound-keylight{from{opacity:.22;transform:translate(0,-2%)}to{opacity:.62;transform:none}}
+@keyframes elor-unbound-glint{0%,40%{opacity:.15}58%{opacity:.68}74%,100%{opacity:.25}}
+@keyframes elor-unbound-breeze{0%,100%{transform:none}28%{transform:skewX(3deg)}65%{transform:skewX(-2deg)}}
+.bridal-image-word{font:italic clamp(66px,9vw,154px)/.92 var(--serif);letter-spacing:-.065em;position:absolute;bottom:55px;left:45px;z-index:2;text-shadow:0 6px 30px #000b;max-width:80%}
+.bridal-image-counter{position:absolute;z-index:2;right:35px;top:32px;font-size:13px;letter-spacing:.2em;color:#e6d6bd}
+.bridal-worlds-panel{background:#1e221f;padding:clamp(30px,4.5vw,66px);display:flex;flex-direction:column;justify-content:center;gap:25px}
+.bridal-worlds-panel .eyebrow{color:#caad86}
+.bridal-worlds-controls{display:grid;gap:0;border-top:1px solid #ffffff35}
+.bridal-worlds-controls button{display:grid;grid-template-columns:38px 1fr;grid-template-rows:auto auto;align-items:center;text-align:left;column-gap:10px;border:0;border-bottom:1px solid #ffffff35;background:transparent;padding:19px 9px;color:#f2e9de;transition:background .25s}
+.bridal-worlds-controls button:hover,.bridal-worlds-controls button[aria-pressed=true]{background:#cbb08d18}
+.bridal-worlds-controls button[aria-pressed=true]{box-shadow:inset 3px 0 #d4b58b}
+.bridal-worlds-controls button>span{grid-row:span 2;color:#bda582;font-size:12px}
+.bridal-worlds-controls strong{font:400 clamp(28px,2.5vw,40px)/1.1 var(--serif)}
+.bridal-worlds-controls small{color:#a9aa9e;font-size:12px;line-height:1.6;margin-top:4px}
+.bridal-worlds-description h3{font:italic 33px/1.2 var(--serif);margin:0;color:#ead2b0}
+.bridal-worlds-description p{color:#bdbbb3;font-size:15px;line-height:1.8;min-height:54px;margin:11px 0 0}
+
+.ritual-chapter{position:relative;min-height:790px;background:#0c1210;display:flex;align-items:center;padding:140px clamp(24px,7vw,116px);isolation:isolate;overflow:hidden}
+.ritual-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-3}
+.ritual-fog{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#08100ffa 0%,#07110fe6 27%,#06100f99 54%,#0b0b0b1a 95%),linear-gradient(0deg,#07100fba,transparent 45%)}
+.ritual-content{max-width:680px;position:relative;z-index:1}
+.ritual-content h2{font:400 clamp(70px,9.2vw,144px)/.92 var(--serif);letter-spacing:-.073em;margin:30px 0}
+.ritual-content h2 em{color:#e0c6a2}
+.ritual-content>p:not(.ritual-detail){color:#f0e8da;line-height:1.85;font-size:18px;max-width:510px}
+.ritual-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #dcc4a35c;border-bottom:1px solid #dcc4a35c;max-width:550px;margin:45px 0 25px}
+.ritual-steps button{background:transparent;border:0;color:#f3e8d9;min-height:68px;padding:15px 12px;text-align:left;font:italic 24px var(--serif);display:grid;gap:3px}
+.ritual-steps button+button{border-left:1px solid #ffffff2b}
+.ritual-steps button span{font:500 11px var(--sans);letter-spacing:.12em;color:#bda784}
+.ritual-steps button[aria-pressed=true]{background:#d3b68d26;box-shadow:inset 0 -2px #dfc39b}
+.ritual-detail{color:#d0c8bb;font-size:15px;min-height:66px;line-height:1.8;max-width:490px}
+.ritual-side-note{position:absolute;right:40px;bottom:36px;letter-spacing:.26em;font-size:11px;color:#e2d3c5bd}
+
+.lookbook-filters{max-width:1440px;margin:48px auto -25px;display:flex;flex-wrap:wrap;gap:7px}
+.lookbook-filters button{border:1px solid #6b625461;background:transparent;color:#3e3932;padding:12px 18px;font-size:13px;letter-spacing:.04em;min-height:45px}
+.lookbook-filters button:hover,.lookbook-filters button[aria-pressed=true]{background:#252d27;color:#f4e9da;border-color:#252d27}
+.folio .folio-gallery{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:67px;align-items:stretch}
+.folio .folio-card,.folio .folio-card:nth-child(2),.folio .folio-card:nth-child(3){margin:0;aspect-ratio:.83}
+.folio .folio-card:nth-child(3n+2){aspect-ratio:.74}
+.folio .folio-card:nth-child(3n+3){aspect-ratio:.96}
+.folio .folio-card[hidden]{display:none!important}
+.folio .lookbook-open{display:block;width:100%;height:100%;border:0;padding:0;background:transparent;text-align:left;position:relative;overflow:hidden;color:#fff}
+.folio .lookbook-open:focus-visible{outline:3px solid #e0af62;outline-offset:-5px}
+.folio .folio-card:after{pointer-events:none}
+.folio .folio-card figcaption{pointer-events:none}
+.lookbook-dialog{position:fixed;max-width:min(1050px,93vw);max-height:92vh;overflow:auto;padding:18px 18px 14px;border:1px solid #c4a989;background:#0b0e0d;color:#f0e5d5;box-shadow:0 35px 120px #000c}
+.lookbook-dialog::backdrop{background:#040605e9;backdrop-filter:blur(9px)}
+.lookbook-dialog img{max-height:75vh;width:auto;max-width:100%;margin:auto;object-fit:contain}
+.lookbook-dialog p{text-align:center;font:italic 25px var(--serif);margin:13px 0 0}
+.lookbook-dialog-close{display:block;margin:0 0 10px auto;border:1px solid #c1a884;background:#252a26;padding:10px 17px;color:#f9ebdb;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+
+.constellation{background:#151a18;color:#eee8db;padding:145px clamp(20px,5vw,95px) 130px;overflow:hidden}
+.constellation-title{max-width:1250px;margin:auto;text-align:center}
+.constellation-title h2{font:400 clamp(67px,9vw,137px)/.91 var(--serif);letter-spacing:-.075em;margin:25px 0}
+.constellation-title h2 em{color:#d5b58b}
+.constellation-title p{max-width:515px;margin:auto;color:#b4b5ac;font-size:17px;line-height:1.85}
+.constellation-body{max-width:1270px;margin:40px auto 0;display:grid;grid-template-columns:1.2fr .8fr;gap:8vw;align-items:center}
+.constellation-orbit{aspect-ratio:1;position:relative;max-width:700px;min-width:0;display:grid;place-items:center}
+.constellation-ring{position:absolute;border:1px solid #baa07860;border-radius:50%;pointer-events:none}
+.ring-one{inset:17%}.ring-two{inset:3%;border-style:dashed;opacity:.42}
+.constellation-center{position:absolute;inset:25%;border-radius:50%;overflow:hidden;box-shadow:0 0 0 1px #cbb4897a,0 0 60px #d9ae6528}
+.constellation-center img{width:100%;height:100%;object-fit:cover;transition:opacity .4s ease}
+.constellation-center img.changing{opacity:.25}
+.constellation-point{position:absolute;border:1px solid #e7c89e;background:#252a26;color:#f2e5d4;border-radius:50%;width:110px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px;letter-spacing:.07em;box-shadow:0 0 25px #0005;z-index:3}
+.constellation-point span{font:italic 24px var(--serif);letter-spacing:0}
+.constellation-point[aria-pressed=true]{background:#d8bf9a;color:#1b221d}
+.point-one{top:0;left:40%}.point-two{bottom:15%;right:0}.point-three{bottom:8%;left:0}
+.constellation-copy .eyebrow{color:#c2a982}
+.constellation-copy h3{font:italic clamp(45px,5vw,72px)/1 var(--serif);margin:25px 0;color:#f3e4d0}
+.constellation-copy p{font-size:17px;line-height:1.9;color:#b7b8ae;min-height:100px}
+.academy-pathways{margin-top:25px;width:100%;max-width:540px;border-top:1px solid #d2bd9863}
+.academy-pathways details{border-bottom:1px solid #d2bd9863}
+.academy-pathways summary{cursor:pointer;padding:16px 28px 16px 0;font:italic 24px var(--serif);position:relative;list-style:none}
+.academy-pathways summary::-webkit-details-marker{display:none}
+.academy-pathways summary::after{content:'+';position:absolute;right:0;top:13px;color:#d6be96}
+.academy-pathways details[open] summary::after{content:'−'}
+.academy-pathways p{font-size:14px;line-height:1.7;margin:0 0 18px}
+
+@media(max-width:1100px){
+  .chapter-intro{grid-template-columns:1.25fr .75fr;gap:40px}
+  .bridal-worlds-layout{grid-template-columns:1.2fr .8fr}
+  .bridal-worlds-panel{padding:32px}
+  .constellation-body{gap:35px}
+}
+@media(width > 760px){
+  .folio .folio-gallery:has(> .folio-card[hidden]) > .folio-card{width:100%;align-self:start}
+}
+@media(max-width:760px){
+  .mobile-menu{gap:16px;padding:28px 28px 60px}
+  .mobile-menu a{font-size:clamp(27px,7.5vw,37px);padding:7px 0}
+  .chapter-intro{display:block;margin-bottom:39px}
+  .chapter-intro h2{font-size:clamp(59px,11vw,85px)}
+  .chapter-intro p{margin-top:25px;font-size:16px}
+  .bridal-worlds{padding:100px 20px}
+  .bridal-worlds-layout{display:block;min-height:0}
+  .bridal-worlds-image{height:62vh;min-height:390px}
+  .bridal-worlds-image img{object-position:61% center}
+  .bridal-worlds-image[data-bridal-look="modern"]{--unbound-x:61%;--unbound-y:16%}
+  .bridal-image-word{font-size:65px;left:25px;bottom:25px}
+  .bridal-worlds-panel{padding:30px 25px 35px}
+  .bridal-worlds-controls{gap:0}
+  .ritual-chapter{min-height:750px;padding:110px 26px 75px;align-items:flex-end}
+  .ritual-backdrop{object-position:70% center}
+  .ritual-fog{background:linear-gradient(0deg,#07100ff7 0%,#07100fd6 45%,#07100f24 100%)}
+  .ritual-content h2{font-size:clamp(70px,12vw,105px)}
+  .ritual-content>p:not(.ritual-detail){font-size:16px}
+  .ritual-steps{margin:27px 0 17px}
+  .ritual-steps button{font-size:20px;min-height:64px}
+  .ritual-side-note{display:none}
+  .lookbook-filters{margin:35px auto -20px}
+  .lookbook-filters button{padding:10px 12px}
+  .folio .folio-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .folio .folio-card,.folio .folio-card:nth-child(2),.folio .folio-card:nth-child(3),.folio .folio-card:nth-child(3n+2),.folio .folio-card:nth-child(3n+3){aspect-ratio:.72;margin:0}
+  .folio .folio-card figcaption{font-size:18px}
+  .constellation{padding:100px 22px 110px}
+  .constellation-title h2{font-size:clamp(66px,11vw,104px)}
+  .constellation-body{display:block;margin-top:45px}
+  .constellation-orbit{max-width:560px;margin:auto}
+  .constellation-point{width:78px;font-size:10px}
+  .constellation-point span{font-size:19px}
+  .constellation-copy{margin-top:30px}
+  .constellation-copy p{min-height:0}
+  .academy-pathways summary{font-size:22px}
+}
+@media(max-width:400px){
+  .bridal-image-word{font-size:55px}
+  .folio .folio-card figcaption{font-size:15px}
+  .ritual-steps button{font-size:18px;padding:12px 7px}
+  .lookbook-filters{gap:5px}
+  .lookbook-filters button{font-size:12px;padding:9px 11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .bridal-worlds-image img,.constellation-center img,.folio .folio-card img{transition:none!important;transform:none!important}
+}
