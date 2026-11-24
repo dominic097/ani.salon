@@ -4,14 +4,11 @@
   const hero = document.getElementById('top');
   const opening = hero?.querySelector('.hero-choices');
   const panel = opening?.querySelector('.hero-miniatures');
-  const openingFigure = panel?.querySelector('.hero-miniature-left');
-  if (!openingFigure) return;
+  const motion = opening?.querySelector('[data-opening="film"]');
+  const heritage = opening?.querySelector('[data-opening="heritage"]');
+  if (!panel || !motion || !heritage) return;
 
   function alignOpeningFigures() {
-    const choices = [...opening.querySelectorAll('.hero-choice')];
-    const selected = choices.findIndex(button => button.getAttribute('aria-pressed') === 'true');
-    if (selected < 0) return;
-
     const bounds = panel.getBoundingClientRect();
     const rtl = getComputedStyle(opening).direction === 'rtl';
     function setPerch(property, choice) {
@@ -20,18 +17,16 @@
       opening.style.setProperty(property, `${offset + button.width / 2}px`);
     }
 
-    const companion = selected < choices.length - 1 ? selected + 1 : Math.max(0, selected - 1);
-    // Their resting artwork faces inward, so keep the pair in the same order.
-    setPerch('--hero-miniature-perch', choices[Math.min(selected, companion)]);
-    setPerch('--hero-miniature-neighbor', choices[Math.max(selected, companion)]);
+    // Seat each figure above its own button independently of the chosen scene.
+    setPerch('--hero-miniature-perch', motion);
+    setPerch('--hero-miniature-neighbor', heritage);
   }
 
   alignOpeningFigures();
-  new MutationObserver(alignOpeningFigures).observe(opening, {
-    attributes: true,
-    attributeFilter: ['aria-pressed'],
-    subtree: true,
-  });
-  if ('ResizeObserver' in window) new ResizeObserver(alignOpeningFigures).observe(opening);
-  else addEventListener('resize', alignOpeningFigures, {passive: true});
+  if ('ResizeObserver' in window) {
+    const resizes = new ResizeObserver(alignOpeningFigures);
+    for (const element of [opening, motion, heritage]) resizes.observe(element);
+  } else {
+    addEventListener('resize', alignOpeningFigures, { passive: true });
+  }
 })();
