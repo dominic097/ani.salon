@@ -6,7 +6,6 @@ if (soundToggle && welcomeSound) {
   const actionSound = new Audio(new URL('./elor-brush-stroke.mp3', import.meta.url));
   const actionSelector = 'button, a[href], summary, [role="button"], input:is([type="button"], [type="submit"], [type="reset"], [type="image"])';
   let muted = false;
-  let welcomeState = 'pending';
   let presented = false;
   let pointerStart;
   let suppressPointerSoundUntil = 0;
@@ -22,43 +21,15 @@ if (soundToggle && welcomeSound) {
 
   function renderControl() {
     soundToggle.hidden = !presented;
-    if (welcomeState === 'blocked' && !muted) {
-      soundToggle.removeAttribute('aria-pressed');
-      soundToggle.removeAttribute('title');
-      soundToggle.textContent = 'Play welcome sound';
-    } else {
-      soundToggle.setAttribute('aria-pressed', String(muted));
-      soundToggle.textContent = 'Mute site sounds';
-      soundToggle.title = muted ? 'Unmute site sounds' : 'Mute site sounds';
-    }
-  }
-
-  async function playWelcome(requested = false) {
-    const expectedState = requested ? 'blocked' : 'pending';
-    if (!presented || document.hidden || muted || welcomeState !== expectedState) return;
-    welcomeState = 'starting';
-    renderControl();
-
-    try {
-      await welcomeSound.play();
-      welcomeState = 'played';
-    } catch (error) {
-      welcomeState = !muted && error.name === 'NotAllowedError' ? 'blocked' : 'finished';
-    }
-    renderControl();
+    soundToggle.setAttribute('aria-pressed', String(muted));
+    soundToggle.title = muted ? 'Unmute site sounds' : 'Mute site sounds';
   }
 
   soundToggle.addEventListener('click', () => {
-    if (welcomeState === 'blocked' && !muted) {
-      playWelcome(true);
-      return;
-    }
-
     muted = !muted;
     if (muted) {
       welcomeSound.pause();
       actionSound.pause();
-      if (welcomeState === 'pending') welcomeState = 'finished';
     }
     try {
       localStorage.setItem(preferenceKey, muted ? '1' : '0');
@@ -129,16 +100,14 @@ if (soundToggle && welcomeSound) {
     if (curtain) await curtain.finished.catch(() => {});
     requestAnimationFrame(() => requestAnimationFrame(() => {
       presented = true;
-      if (muted) welcomeState = 'finished';
-      else actionSound.preload = 'auto';
       renderControl();
-      playWelcome();
+      if (!muted && !document.hidden) {
+        actionSound.preload = 'auto';
+        // The opening cue has one chance to play. Browsers may block autoplay.
+        welcomeSound.play().catch(() => {});
+      }
     }));
   }
 
   presentAfterOpening();
-
-  document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) playWelcome();
-  });
 }
