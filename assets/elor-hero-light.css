@@ -6,7 +6,6 @@
   z-index: -2;
   overflow: hidden;
   pointer-events: none;
-  mix-blend-mode: screen;
   contain: paint;
 }
 .hero[data-hero-opening="heritage"] .hero-light {

@@ -182,7 +182,6 @@
   .hero-choice { flex:1; padding:7px 10px; min-width:0; min-height:48px; }
   .hero-choice span { font-size:10px; letter-spacing:.08em; }
   .hero-choice strong { font-size:16px; }
-  .preview-pill { position:static; align-self:flex-start; }
   .film-control { padding:9px 13px; }
   .living-edit { padding:95px 20px 110px; }
   .edit-heading { display:block; margin-bottom:45px; }

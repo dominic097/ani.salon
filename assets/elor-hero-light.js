@@ -69,7 +69,7 @@
   async function prepareRenderer() {
     try {
       if (!timer || !canAnimate()) return;
-      const { createHeroLight } = await import('./elor-hero-webgl.js');
+      const { createHeroLight } = await import('./elor-hero-webgl.js?v=premultiplied-light');
       if (!timer || !canAnimate()) return;
       renderer = createHeroLight(canvas);
       if (!renderer) unavailable = true;

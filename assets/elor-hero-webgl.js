@@ -34,7 +34,8 @@ void main() {
   vec3 gold = vec3(1.0, .68, .32);
   vec3 jade = mix(vec3(.78, .63, .92), vec3(.49, .82, .77), silk);
   vec3 spectrum = mix(mix(pearl, gold, min(uTone, 1.0)), jade, max(uTone - 1.0, 0.0));
-  fragColor = vec4(spectrum, min(alpha, .28));
+  float coverage = clamp(alpha, 0.0, .24);
+  fragColor = vec4(spectrum * coverage, coverage);
 }`;
 
 export function createHeroLight(canvas) {
@@ -43,7 +44,8 @@ export function createHeroLight(canvas) {
     antialias: false,
     depth: false,
     stencil: false,
-    premultipliedAlpha: false,
+    // Supply premultiplied output directly so the compositor can apply source-over.
+    premultipliedAlpha: true,
     powerPreference: 'low-power'
   });
   if (!gl) return null;
