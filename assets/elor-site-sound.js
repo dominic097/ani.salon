@@ -1,11 +1,8 @@
-const soundToggle = document.querySelector('#siteSoundToggle');
 const welcomeSound = document.querySelector('#welcomeSound');
 
-if (soundToggle && welcomeSound) {
-  const preferenceKey = 'elor-site-sounds-muted';
+if (welcomeSound) {
   const actionSound = new Audio(new URL('./elor-brush-stroke.mp3', import.meta.url));
   const actionSelector = 'button, a[href], summary, [role="button"], input:is([type="button"], [type="submit"], [type="reset"], [type="image"])';
-  let muted = false;
   let presented = false;
   let pointerStart;
   let suppressPointerSoundUntil = 0;
@@ -13,42 +10,17 @@ if (soundToggle && welcomeSound) {
 
   actionSound.preload = 'none';
   actionSound.volume = 0.6;
-  try {
-    muted = localStorage.getItem(preferenceKey) === '1';
-  } catch {
-    // The control still works when storage access is unavailable.
-  }
-
-  function renderControl() {
-    soundToggle.hidden = !presented;
-    soundToggle.setAttribute('aria-pressed', String(muted));
-    soundToggle.title = muted ? 'Unmute site sounds' : 'Mute site sounds';
-  }
-
-  soundToggle.addEventListener('click', () => {
-    muted = !muted;
-    if (muted) {
-      welcomeSound.pause();
-      actionSound.pause();
-    }
-    try {
-      localStorage.setItem(preferenceKey, muted ? '1' : '0');
-    } catch {
-      // The current page does not require persistent storage.
-    }
-    renderControl();
-  });
 
   function findControl(target) {
     const control = target instanceof Element ? target.closest(actionSelector) : null;
-    if (!control || control === soundToggle || control.matches(':disabled') ||
+    if (!control || control.matches(':disabled') ||
         control.closest('[inert], [aria-disabled="true"]')) return null;
     return control;
   }
 
   function playAction() {
     const now = performance.now();
-    if (muted || !presented || document.hidden || now - lastAction < 120) return;
+    if (!presented || document.hidden || now - lastAction < 120) return;
     lastAction = now;
     actionSound.currentTime = 0;
     actionSound.play().catch(() => {});
@@ -100,8 +72,7 @@ if (soundToggle && welcomeSound) {
     if (curtain) await curtain.finished.catch(() => {});
     requestAnimationFrame(() => requestAnimationFrame(() => {
       presented = true;
-      renderControl();
-      if (!muted && !document.hidden) {
+      if (!document.hidden) {
         actionSound.preload = 'auto';
         // The opening cue has one chance to play. Browsers may block autoplay.
         welcomeSound.play().catch(() => {});
@@ -109,5 +80,9 @@ if (soundToggle && welcomeSound) {
     }));
   }
 
-  presentAfterOpening();
+  if (document.readyState === 'complete') {
+    presentAfterOpening();
+  } else {
+    window.addEventListener('load', presentAfterOpening, { once: true });
+  }
 }
