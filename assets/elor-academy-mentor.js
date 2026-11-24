@@ -20,7 +20,7 @@ if (mentor) {
   }
 
   loopCharacterMotionInView(mentor, {
-    imageUrl: new URL("./elor-academy-mentor.webp", import.meta.url),
+    imageUrl: new URL("./elor-academy-mentor.webp?v=owner-likeness", import.meta.url),
     attribute: "data-academy-mentor-gl",
     sourceArea,
     threshold: .7,

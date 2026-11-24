@@ -19,7 +19,7 @@
   display: block;
   inline-size: clamp(95px, 10.6vw, 155px);
   aspect-ratio: 1;
-  background: url("elor-academy-mentor.webp") center / contain no-repeat;
+  background: url("elor-academy-mentor.webp?v=owner-likeness") center / contain no-repeat;
   filter: drop-shadow(0 4px 10px #111b);
   pointer-events: none;
 }
